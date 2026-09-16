@@ -24,7 +24,7 @@ public class Guestbook {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(nullable = false, length = 200)
+    @Column(length = 200)
     private String ps;
 
 

@@ -5,4 +5,4 @@ INSERT INTO guestbooks (title, content, writer, created_at, ps) VALUES ('안녕�
 
 INSERT INTO guestbooks (title, content, writer, created_at, ps) VALUES ('가을 축사', '와~ 재미있겠다~.', '멋쟁이사자14기', NOW(), '은서');
 
-INSERT INTO guestbooks (title, content, writer, created_at, ps) VALUES ('와~', 'django vs spring', '멋사', NOW(), 'CES');
+INSERT INTO guestbooks (title, content, writer, created_at, ps) VALUES ('와~', 'django vs spring', '멋사', NOW(), NULL);
