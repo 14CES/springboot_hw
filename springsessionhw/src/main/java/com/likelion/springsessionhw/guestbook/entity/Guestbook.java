@@ -1,9 +1,12 @@
 package com.likelion.springsessionhw.guestbook.entity;
-
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Table(name = "guestbooks")
 public class Guestbook {
@@ -27,32 +30,19 @@ public class Guestbook {
     @Column(length = 200)
     private String ps;
 
-
-    protected Guestbook(){
+    public Guestbook(String title, String content, String writer, LocalDateTime createdAt, String ps){
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.createdAt = createdAt;
+        this.ps = ps;
     }
 
-    public Long getId(){
-        return id;
-    }
-
-    public String getTitle(){
-        return title;
-    }
-
-    public String getContent(){
-        return content;
-    }
-
-    public String getWriter(){
-        return writer;
-    }
-
-    public LocalDateTime getCreatedAt(){
-        return createdAt;
-    }
-
-    public String getPs(){
-        return ps;
+    public void update(String title, String content, String writer, String ps){
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.ps = ps;
     }
 }
 
